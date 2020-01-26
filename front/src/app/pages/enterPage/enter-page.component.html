@@ -1,0 +1,16 @@
+<div class="overlay">
+  <div class="content">
+    <h2 class="name">Enter name</h2>
+    <form method="post" [formGroup]="enterNameForm" (ngSubmit)="onSubmit(enterNameForm.value)">
+      <label for="name">
+        <input type="text" id="name" formControlName="name">
+      </label>
+      <div class="invalid" *ngIf="enterNameForm.get('name').invalid
+       && enterNameForm.get('name').touched">Invalid name.
+      </div>
+      <div class="submit-name">
+        <button type="submit">Enter game</button>
+      </div>
+    </form>
+  </div>
+</div>

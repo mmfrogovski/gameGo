@@ -1,0 +1,37 @@
+<div class="wrap">
+  <div class="content">
+    <div>
+      <table class="table">
+        <tr *ngFor="let item of cells; let i = index;">
+          <td (click)="getIJ(0, i)">
+            <div [ngClass]="{'black': item[0]==2, 'white': item[0]==1, 'circle': item[0]==0}"> </div>
+          </td>
+          <td (click)="getIJ(1, i)">
+            <div [ngClass]="{'black': item[1]==2, 'white': item[1]==1, 'circle': item[1]==0}"> </div>
+          </td>
+          <td (click)="getIJ(2, i)">
+            <div [ngClass]="{'black': item[2]==2, 'white': item[2]==1, 'circle': item[2]==0}"> </div>
+          </td>
+          <td (click)="getIJ(3, i)">
+            <div [ngClass]="{'black': item[3]==2, 'white': item[3]==1, 'circle': item[3]==0}"> </div>
+          </td>
+          <td (click)="getIJ(4, i)">
+            <div [ngClass]="{'black': item[4]==2, 'white': item[4]==1, 'circle': item[4]==0}"> </div>
+          </td>
+          <td (click)="getIJ(5, i)">
+            <div [ngClass]="{'black': item[5]==2, 'white': item[5]==1, 'circle': item[5]==0}"></div>
+          </td>
+          <td (click)="getIJ(6, i)">
+            <div [ngClass]="{'black': item[6]==2, 'white': item[6]==1, 'circle': item[6]==0}"></div>
+          </td>
+          <td (click)="getIJ(7, i)">
+            <div [ngClass]="{'black': item[7]==2, 'white': item[7]==1, 'circle': item[7]==0}"></div>
+          </td>
+          <td (click)="getIJ(8, i)">
+            <div [ngClass]="{'black': item[8]==2, 'white': item[8]==1, 'circle': item[8]==0}"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -10,18 +10,18 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private int x;
-    private int y;
-    private String value;
+    private String cells;
+    private String turn;
+    private int players;
 
     public Game() {
     }
 
-    public Game(String name, int x, int y, String value) {
+    public Game(String name, String cells, String turn, int players) {
         this.name = name;
-        this.x = x;
-        this.y = y;
-        this.value = value;
+        this.cells = cells;
+        this.turn = turn;
+        this.players = players;
     }
 
     public long getId() {
@@ -40,28 +40,28 @@ public class Game {
         this.name = name;
     }
 
-    public int getX() {
-        return x;
+    public String getCells() {
+        return cells;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setCells(String cells) {
+        this.cells = cells;
     }
 
-    public int getY() {
-        return y;
+    public String getTurn() {
+        return turn;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setTurn(String turn) {
+        this.turn = turn;
     }
 
-    public String getValue() {
-        return value;
+    public int getPlayers() {
+        return players;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setPlayers(int players) {
+        this.players = players;
     }
 
     @Override
@@ -69,9 +69,9 @@ public class Game {
         return "Game{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", x=" + x +
-                ", y=" + y +
-                ", value='" + value + '\'' +
+                ", cells='" + cells + '\'' +
+                ", turn='" + turn + '\'' +
+                ", players=" + players +
                 '}';
     }
 }
